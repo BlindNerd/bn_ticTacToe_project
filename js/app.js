@@ -117,24 +117,25 @@ function markBox(box1) {
 
  function computerAI(box1, box2, box3) {
 
-   if (box1.className == o && box2.className == o) {
+ if (box1.className == x && box2.className == x) {
+   markBox(box3);
+
+  }else if (box1.className == x && box3.className == x) {
+   markBox(box2);
+
+  }else if (box2.className == x && box3.className == x) {
+   markBox(box1);
+
+  }else if (box1.className == o && box2.className == o) {
      markBox(box3);
 
-    }else if (box1.className == o && box3.className == o) {
+  }else if (box1.className == o && box3.className == o) {
      markBox(box2);
 
-    }else if (box2.className == o && box3.className == o) {
+  }else if (box2.className == o && box3.className == o) {
      markBox(box1);
-     
-    }else if (box1.className == x && box2.className == x) {
-      markBox(box3);
+  }
 
-    }else if (box1.className == x && box3.className == x) {
-      markBox(box2);
-
-    }else if (box2.className == x && box3.className == x) {
-      markBox(box1);
-   }
 }
   function checkWin() {
     winOrLose(box[0], box[1], box[2]);
